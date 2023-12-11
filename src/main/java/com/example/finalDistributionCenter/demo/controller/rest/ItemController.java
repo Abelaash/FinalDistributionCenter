@@ -1,2 +1,4 @@
-package com.example.finalDistributionCenter.demo.controller.rest;public class ItemController {
+package com.example.finalDistributionCenter.demo.controller.rest;
+
+public class ItemController {
 }
