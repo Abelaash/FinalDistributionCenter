@@ -1,2 +1,4 @@
-package com.example.finalDistributionCenter.demo.config;public class SecurityConfig {
+package com.example.finalDistributionCenter.demo.config;
+
+public class SecurityConfig {
 }

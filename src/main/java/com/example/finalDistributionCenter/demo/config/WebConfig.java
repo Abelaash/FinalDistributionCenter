@@ -1,2 +1,4 @@
-package com.example.finalDistributionCenter.demo.config;public class WebConfig {
+package com.example.finalDistributionCenter.demo.config;
+
+public class WebConfig {
 }
