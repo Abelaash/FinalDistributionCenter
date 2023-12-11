@@ -27,7 +27,7 @@ public class Item {
     private String name;
     @NotNull
     @Min(2022)
-    private Integer createYear;
+    private Integer yearOfCreation;
     @NotNull
     @Min(0)
     private int quantity;
@@ -44,7 +44,7 @@ public class Item {
             return title;
         }
     }
-    private Brand brandFrom;
+    private Brand brand;
     @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
     @JsonIgnore

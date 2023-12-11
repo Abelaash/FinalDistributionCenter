@@ -2,6 +2,7 @@ package com.example.finalDistributionCenter.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -27,7 +28,7 @@ public class SecurityConfig {
     public InMemoryUserDetailsManager distributionCenterManager() {
         UserDetails admin = User.builder()
                 .username("admin")
-                .password(passwordEncoder().encode("1"))
+                .password(passwordEncoder().encode("123"))
                 .roles("ADMIN")
                 .build();
 
@@ -37,23 +38,17 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .authorizeHttpRequests()
-                .requestMatchers(toH2Console()).permitAll()
-                .requestMatchers("/api/add/**").hasRole("ADMIN")
-                .requestMatchers("/api/delete/**").hasRole("ADMIN")
-                .requestMatchers("/api/center/**").hasRole("ADMIN")
-                .requestMatchers("/api/update/**").hasRole("ADMIN")
-                .requestMatchers("/api/item/**").hasRole("ADMIN")
-                .anyRequest().permitAll()
-                .and()
-                .csrf()
-                .ignoringRequestMatchers(toH2Console())
-                .and()
-                .headers()
-                .frameOptions()
-                .sameOrigin()
-                .and()
-                .build();
+                .csrf().disable()
+                .headers().frameOptions().disable().and()
+                .cors().and()
+                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                        .requestMatchers(toH2Console()).permitAll()
+                        .requestMatchers("/api/center/**").authenticated()
+                        .requestMatchers("/api/item/**").authenticated()
+                        .requestMatchers("/api/delete/**").authenticated()
+                        .requestMatchers("/api/update/**").authenticated()
+                        .requestMatchers("/api/add/**").authenticated()
+                ).httpBasic(Customizer.withDefaults()).build();
 
     }
 }

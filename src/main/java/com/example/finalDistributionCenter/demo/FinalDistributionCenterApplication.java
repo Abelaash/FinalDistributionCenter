@@ -25,22 +25,22 @@ public class FinalDistributionCenterApplication {
 					.save(DistributionCenter.builder().name("location 1").latitude(43.711615).longitude(-79.401982).build());
 			itemRepository
 					.save(Item.builder().name("Small Nomad Bag")
-							.createYear(2024)
-							.brandFrom(Item.Brand.DIOR)
+							.yearOfCreation(2024)
+							.brand(Item.Brand.DIOR)
 							.price(new BigDecimal(4700))
 							.quantity(10).distributionCenter(distributionCenter1).build());
 			itemRepository
 					.save(Item.builder()
 							.name("B30 Sneaker")
-							.createYear(2023)
-							.brandFrom(Item.Brand.DIOR)
+							.yearOfCreation(2023)
+							.brand(Item.Brand.DIOR)
 							.price(new BigDecimal(1350))
 							.quantity(5).distributionCenter(distributionCenter1).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Sweater")
-							.createYear(2022)
-							.brandFrom(Item.Brand.DIOR)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.DIOR)
 							.price(new BigDecimal(4000)).distributionCenter(distributionCenter1).quantity(8).build());
 		};
 	}
@@ -53,26 +53,26 @@ public class FinalDistributionCenterApplication {
 			itemRepository
 					.save(Item.builder()
 							.name("Box Logo Hoodie")
-							.createYear(2022)
-							.brandFrom(Item.Brand.SUPREME)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.SUPREME)
 							.price(new BigDecimal(1100)).quantity(20).distributionCenter(distributionCenter2).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Box Logo Backpack")
-							.createYear(2022)
-							.brandFrom(Item.Brand.SUPREME)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.SUPREME)
 							.price(new BigDecimal(2100)).quantity(15).distributionCenter(distributionCenter2).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Tourist varsity \"Black\" jacket")
-							.createYear(2022)
-							.brandFrom(Item.Brand.SUPREME)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.SUPREME)
 							.price(new BigDecimal(1350)).quantity(10).distributionCenter(distributionCenter2).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Sweater")
-							.createYear(2022)
-							.brandFrom(Item.Brand.DIOR)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.DIOR)
 							.price(new BigDecimal(4000)).distributionCenter(distributionCenter2).quantity(2).build());
 		};
 	}
@@ -85,20 +85,20 @@ public class FinalDistributionCenterApplication {
 			itemRepository
 					.save(Item.builder()
 							.name("Air Jordan 1 Retro High Off-White Chicago")
-							.createYear(2022)
-							.brandFrom(Item.Brand.OFFWHITE)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.OFFWHITE)
 							.price(new BigDecimal(7000)).quantity(13).distributionCenter(distributionCenter3).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Script Logo Opp Over Skate Hoodie")
-							.createYear(2022)
-							.brandFrom(Item.Brand.OFFWHITE)
+							.yearOfCreation(2022)
+							.brand(Item.Brand.OFFWHITE)
 							.price(new BigDecimal(1550)).quantity(2).distributionCenter(distributionCenter3).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Nike Air Force 1 Low Off-White")
-							.createYear(2024)
-							.brandFrom(Item.Brand.OFFWHITE)
+							.yearOfCreation(2024)
+							.brand(Item.Brand.OFFWHITE)
 							.price(new BigDecimal(2250)).quantity(5).distributionCenter(distributionCenter3).build());
 		};
 	}
@@ -111,20 +111,20 @@ public class FinalDistributionCenterApplication {
 			itemRepository
 					.save(Item.builder()
 							.name("Jacket")
-							.createYear(2023)
-							.brandFrom(Item.Brand.STONEISLAND)
+							.yearOfCreation(2023)
+							.brand(Item.Brand.STONEISLAND)
 							.price(new BigDecimal(1100)).quantity(6).distributionCenter(distributionCenter4).build());
 			itemRepository
 					.save(Item.builder()
 							.name("Sweater")
-							.createYear(2025)
-							.brandFrom(Item.Brand.STONEISLAND)
+							.yearOfCreation(2025)
+							.brand(Item.Brand.STONEISLAND)
 							.price(new BigDecimal(1550)).quantity(20).distributionCenter(distributionCenter4).build());
 			itemRepository
 					.save(Item.builder()
 							.name("T-SHIRTS")
-							.createYear(2023)
-							.brandFrom(Item.Brand.STONEISLAND)
+							.yearOfCreation(2023)
+							.brand(Item.Brand.STONEISLAND)
 							.price(new BigDecimal(1150)).quantity(25).distributionCenter(distributionCenter4).build());
 		};
 	}

@@ -6,9 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ItemRepository extends CrudRepository<Item, Long> {
-    List<Item> findByBrandFromEquals(Item.Brand brandFrom);
+    List<Item> findByBrandEquals(Item.Brand brand);
 
     List<Item> findByNameEquals(String name);
 
-    List<Item> findByNameEqualsAndAndBrandFromEquals(String name, Item.Brand brandFrom);
+    List<Item> findByNameEqualsAndAndBrandEquals(String name, Item.Brand brand);
 }

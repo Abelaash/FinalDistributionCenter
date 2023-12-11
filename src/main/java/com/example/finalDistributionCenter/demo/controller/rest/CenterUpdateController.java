@@ -10,6 +10,9 @@ import com.example.finalDistributionCenter.demo.repository.ItemRepository;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+import java.util.Map;
+
 @RestController
 @RequestMapping(path = "/api/update", produces = "application/json")
 public class CenterUpdateController {
@@ -43,9 +46,10 @@ public class CenterUpdateController {
         itemToUpdate.setName(itemToUpdate.getName());
         itemToUpdate.setQuantity(itemToUpdate.getQuantity()- quantity);
         itemToUpdate.setPrice(itemToUpdate.getPrice());
-        itemToUpdate.setBrandFrom(itemToUpdate.getBrandFrom());
-        itemToUpdate.setCreateYear(itemToUpdate.getCreateYear());
+        itemToUpdate.setBrand(itemToUpdate.getBrand());
+        itemToUpdate.setYearOfCreation(itemToUpdate.getYearOfCreation());
         itemToUpdate.setDistributionCenter(itemToUpdate.getDistributionCenter());
         return itemRepository.save(itemToUpdate);
     }
+    
 }
